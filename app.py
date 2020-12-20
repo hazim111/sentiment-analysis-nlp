@@ -66,7 +66,7 @@ def predict():
         positive_prediction = sentence_prediction(sentence)
         negative_prediction = 1 - positive_prediction
         return render_template(
-            'index.html',
+            's3://static-nlp-data/templates/index.html',
             time_taken= 'Time taken: {}'.format(time.time() - start_time), 
             prediction_positive='Positive probability: {}'.format(positive_prediction),
             prediction_negative='Negative probability: {}'.format(negative_prediction)
